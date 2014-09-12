@@ -383,7 +383,7 @@ public class CallCardFragment extends BaseFragment<CallCardPresenter, CallCardPr
         } else if (Call.State.ACTIVE == state) {
             // We normally don't show a "call state label" at all in
             // this state (but see below for some special cases).
-
+            mDetailedCallInfo.setVisibility(View.GONE);
         } else if (Call.State.ONHOLD == state) {
             callStateLabel = context.getString(R.string.card_title_on_hold);
         } else if (Call.State.DIALING == state) {
